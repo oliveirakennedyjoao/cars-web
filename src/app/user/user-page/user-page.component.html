@@ -1,0 +1,59 @@
+<div class="user-container">
+    <form [formGroup]="userForm">
+        <div>
+            <div class="section-header"> Credentials </div>
+            <div class="lined-container">
+                <mat-form-field appearance="outline" color="#2ed6bf">
+                    <mat-label> Login </mat-label>
+                    <input matInput formControlName="login">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label> Password </mat-label>
+                    <input matInput [type]="passwordVisibility ? 'password' : 'text'" formControlName="password">
+                    <button mat-button matSuffix mat-icon-button type="button" (click)="passwordVisibility = !passwordVisibility">
+                        <mat-icon>visibility</mat-icon>
+                    </button>                                  
+                </mat-form-field>
+            </div>
+
+            <div class="section-header"> Personal Information </div>
+
+            <div class="lined-container">
+                <mat-form-field appearance="outline">
+                    <mat-label> First Name </mat-label>
+                    <input matInput formControlName="firstName">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label> Last Name </mat-label>
+                    <input matInput formControlName="lastName">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label> Birthday </mat-label>
+                    <input matInput formControlName="birthday" placeholder="Ex. 01/01/2000" type="date">
+                </mat-form-field>
+            </div>
+
+            <div class="section-header"> Contact Information </div>
+
+            <div class="lined-container">
+                <mat-form-field appearance="outline">
+                    <mat-label> E-mail </mat-label>
+                    <input matInput formControlName="email" placeholder="Ex. car@example.com" type="email">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label> Phone </mat-label>
+                    <input matInput formControlName="phone" placeholder="Ex. (99) 99999-9999" type="tel">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button mat-raised-button class="user-button_cancel" type="button" (click)="navigateToUserList()"> Cancel </button>
+            <button mat-raised-button class="user-button_save" (click)="save()"> Save </button>
+        </div>
+    </form>
+</div>

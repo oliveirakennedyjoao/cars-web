@@ -1,0 +1,42 @@
+.login-container{
+    display: flex;
+    height: 100%;
+    background-color: #fafafa;
+
+    div{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+
+        mat-card{
+            width: 50%;
+            padding: 5em 3em 5em 3em;
+            background-color: white;
+            
+            form{            
+                display: flex;
+                flex-direction: column;            
+            }                
+        }        
+    }
+}
+
+.app-title{
+    color: #2ed6bf;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+.login-button{
+    background-color: #2ed6bf;
+    border: #2ed6bf;
+    border-radius: 2em;
+    padding: .5em 1.5em .5em 1.5em;
+    width: 100%;
+    font-size: 1.25em;
+    color:  rgb(245, 245, 245);
+}

@@ -1,0 +1,38 @@
+.home-container{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding-top: 5em;
+    margin: auto;
+}
+
+mat-card{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-width: 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0 5em 0;
+
+    mat-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        height: 180px;
+        width: 240px;
+        font-size: 6em;
+        color: #2ed6bf;
+        border-radius: 50%;
+    }
+
+    label{
+        font-size: 2em;
+        color: #2ed6bf;
+    }
+    
+    &:hover{
+        cursor: pointer;
+    }
+}

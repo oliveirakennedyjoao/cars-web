@@ -1,0 +1,45 @@
+$toolbar-color: #2ed6bf;
+$toolbar-text-color: rgb(245, 245, 245);
+
+.app-toolbar_color{    
+    background-color: $toolbar-color;
+    color: $toolbar-text-color;
+}
+
+.main-content{
+    height: calc(100% - 4em);
+}
+
+.fill-parent{
+    height: 100%;
+}
+
+.mat-drawer_width{
+    width: 5em;    
+}
+
+mat-drawer-container{
+    height: 100%;
+}
+
+mat-toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div{
+        text-align: center;
+    }
+}
+
+.mat-menu-item{
+    min-width: 200px;
+}
+
+.alert_success_state{
+    background-color: #2ed6bf;
+}
+
+.alert_error_state{
+    background-color: tomato;
+}

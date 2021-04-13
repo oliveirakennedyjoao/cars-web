@@ -1,0 +1,38 @@
+<section class="user-list-container">
+    <div class="table-header">
+        <label class="table-header_label"> Users </label>
+    </div>
+    <table *ngIf="dataSource" mat-table [dataSource]="dataSource" class="mat-elevation-z8">        
+        <ng-container matColumnDef="userName">
+            <th mat-header-cell *matHeaderCellDef> Nome </th>
+            <td mat-cell *matCellDef="let user"> {{ user.firstName + ' ' + user.lastName }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let user"> {{ user.email }} </td>
+        </ng-container>        
+
+        <ng-container matColumnDef="acao">
+            <th mat-header-cell *matHeaderCellDef> Ação </th>
+            <td mat-cell *matCellDef="let user">
+                <button mat-icon-button (click)="editUser(user.login)">
+                    <mat-icon class="table-icon"> edit </mat-icon>
+                </button>                
+                <button mat-icon-button (click)="deleteUser(user.login)">
+                    <mat-icon class="table-icon"> delete icon </mat-icon>
+                </button>                
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" class="user-mat-header-row"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="user-mat-row"></tr>
+    </table>
+
+    <mat-paginator class="user-mat-paginator" [length]="dataSource?.data.length" [pageSize]="5"
+        [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+</section>
+<button mat-icon-button (click)="navigateTo('users')" class="new-button">
+    <mat-icon class="table-icon"> add </mat-icon>
+</button>  
