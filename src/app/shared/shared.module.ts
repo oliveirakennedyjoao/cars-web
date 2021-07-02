@@ -16,7 +16,6 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
     ComponentsModule
   ],
   providers:[
-    //{ provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AuthService]},
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: UnauthorizedInterceptor, multi: true }
   ],
@@ -25,10 +24,4 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
   ]
 })
 
-export class SharedModule {
-  /*constructor(@Optional() @SkipSelf() shared: SharedModule) {
-    if (shared) {
-      throw new Error('Core Module can only be imported to AppModule.');
-    }
-  }*/
-}
+export class SharedModule { }
