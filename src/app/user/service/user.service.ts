@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { take } from 'rxjs/operators'
 
-import UserDTO from 'src/app/shared/dtos/UserDTO';
+import UserDTO from 'src/app/shared/models/entities/UserDTO';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

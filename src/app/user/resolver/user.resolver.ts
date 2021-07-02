@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { EMPTY, Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import UserDTO from 'src/app/shared/dtos/UserDTO';
+import UserDTO from 'src/app/shared/models/entities/UserDTO';
 import { UserService } from '../service/user.service';
 
 @Injectable({

@@ -3,9 +3,9 @@ import { getMatInputUnsupportedTypeError } from '@angular/material/input';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import UserDTO from 'src/app/shared/dtos/UserDTO';
-import { AlertType } from 'src/app/shared/enums/AlertType';
-import { AlertService } from 'src/app/shared/services/alert/alert.service';
+import UserDTO from 'src/app/shared/models/entities/UserDTO';
+import { AlertType } from 'src/app/shared/models/enums/AlertType';
+import { AlertService } from 'src/app/core/services/alert/alert.service';
 import { UserService } from '../service/user.service';
 
 @Component({

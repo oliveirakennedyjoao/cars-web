@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import UserDTO from 'src/app/shared/dtos/UserDTO';
-import { AlertType } from 'src/app/shared/enums/AlertType';
-import { AlertService } from 'src/app/shared/services/alert/alert.service';
+import UserDTO from 'src/app/shared/models/entities/UserDTO';
+import { AlertType } from 'src/app/shared/models/enums/AlertType';
+import { AlertService } from 'src/app/core/services/alert/alert.service';
 import { UserService } from '../service/user.service';
 
 @Component({

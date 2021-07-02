@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthGuard } from '../shared/guards/auth-guard';
+import { AuthGuard } from '../core/guards/auth-guard';
 import { CarPageComponent } from './car-page/car-page.component';
 
 const carRoutes: Routes = [

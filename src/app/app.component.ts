@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
-import UserLoginNameDTO from './shared/dtos/UserLoginNameDTO.type';
-import { AuthService } from './shared/services/auth/auth.service';
+import UserLoginNameDTO from './shared/models/entities/UserLoginNameDTO.type';
+import { AuthService } from './core/services/auth/auth.service';
 
 @Component({
   selector: 'app-root',

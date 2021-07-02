@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { map, take } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import UserCredentialsDTO from '../../dtos/UserCredentialsDTO.type';
+import UserCredentialsDTO from '../../../shared/models/entities/UserCredentialsDTO.type';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 
 @Injectable({

@@ -1,10 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import UserCredentialsDTO from 'src/app/shared/dtos/UserCredentialsDTO.type';
-import { AlertType } from 'src/app/shared/enums/AlertType';
-import { AlertService } from 'src/app/shared/services/alert/alert.service';
-import { AuthService } from 'src/app/shared/services/auth/auth.service';
+import UserCredentialsDTO from 'src/app/shared/models/entities/UserCredentialsDTO.type';
+import { AlertType } from 'src/app/shared/models/enums/AlertType';
+import { AlertService } from 'src/app/core/services/alert/alert.service';
+import { AuthService } from 'src/app/core/services/auth/auth.service';
 
 @Component({
   selector: 'login-page',

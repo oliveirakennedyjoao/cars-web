@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthGuard } from '../shared/guards/auth-guard';
+import { AuthGuard } from '../core/guards/auth-guard';
 import { UserResolver } from './resolver/user.resolver';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserPageComponent } from './user-page/user-page.component';
