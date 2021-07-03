@@ -11,24 +11,26 @@ import { environment } from 'src/environments/environment';
 })
 export class UserService {
 
-  user_api_url = environment.apiUrl + 'users';
+  USER_API_URL: string;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+    this.USER_API_URL = environment.API_URL + '/' +'user';
+  }
 
   private create(object: UserDTO){    
-    return this.httpClient.post(this.user_api_url, object).pipe(take(1));
+    return this.httpClient.post(this.USER_API_URL, object).pipe(take(1));
   }
 
   private update(object: UserDTO){
-    return this.httpClient.put(`${this.user_api_url}/${object['login']}`, object).pipe(take(1));
+    return this.httpClient.put(`${this.USER_API_URL}/${object['login']}`, object).pipe(take(1));
   }
 
   get(){
-    return this.httpClient.get<UserDTO[]>(this.user_api_url).pipe(take(1));
+    return this.httpClient.get<UserDTO[]>(this.USER_API_URL).pipe(take(1));
   }  
 
   getById(userId){
-    return this.httpClient.get<UserDTO>(`${this.user_api_url}/${userId}`).pipe(take(1));
+    return this.httpClient.get<UserDTO>(`${this.USER_API_URL}/${userId}`).pipe(take(1));
   }
 
   save(object: UserDTO, editMode: boolean){               
@@ -36,6 +38,6 @@ export class UserService {
   }
 
   delete(userId){
-    return this.httpClient.delete(`${this.user_api_url}/${userId}`).pipe(take(1));
+    return this.httpClient.delete(`${this.USER_API_URL}/${userId}`).pipe(take(1));
   }
 }

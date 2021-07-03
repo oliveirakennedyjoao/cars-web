@@ -15,22 +15,10 @@ export class UserResolver implements Resolve<any> {
   ){}
 
   resolve(rotaSnap: ActivatedRouteSnapshot, _state: RouterStateSnapshot): Observable<UserDTO> {
-    
-    //if(rotaSnap.params && rotaSnap.params.id){
-      return this.userService.getById(rotaSnap.params.id).pipe(
+      /*return this.userService.getById(rotaSnap.params.id).pipe(
         catchError((error) => { return EMPTY })
-      );      
-        //error => { return EMPTY }      
-    //}
+      );*/
 
-    /*return of({ 
-      firstName: null, 
-      lastName: null, 
-      email: null, 
-      birthday: null, 
-      login: null, 
-      password: null, 
-      phone: null, 
-      cars: null });*/
+      return;
   }
 }

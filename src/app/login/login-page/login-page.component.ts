@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import UserCredentialsDTO from 'src/app/shared/models/entities/UserCredentialsDTO.type';
+import { UserCredentials} from 'src/app/shared/models/entities/UserCredentials.type';
 import { AlertType } from 'src/app/shared/models/enums/AlertType';
 import { AlertService } from 'src/app/core/services/alert/alert.service';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
@@ -26,13 +26,13 @@ export class LoginPageComponent implements OnInit {
   ngOnInit(): void {
     
     this.loginForm = new FormGroup({            
-      login: new FormControl(),
+      email: new FormControl(),
       password: new FormControl()
     });
   }
 
   async signing(){
-    let result = await this.authService.login(<UserCredentialsDTO> this.loginForm.value).subscribe(
+    let result = await this.authService.login(<UserCredentials> this.loginForm.value).subscribe(
       success => {
         this.onSignIn.emit();
         this.router.navigateByUrl('home');      
